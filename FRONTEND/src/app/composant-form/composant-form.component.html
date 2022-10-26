@@ -17,14 +17,13 @@
                     <td>
                         <mat-form-field appearance="standard">
                             <mat-label>Nom</mat-label>
-                            <input [(ngModel)]="client.name" matInput  name="name" pattern="[A-Za-z]{0,20}"required>
-
+                            <input appVerifyKeypress [(ngModel)]="client.name" matInput  name="name" pattern="[A-Za-z]{0,20}"required>
                         </mat-form-field>
                     </td>
                     <td>
                         <mat-form-field appearance="standard">
                             <mat-label>Prénom</mat-label>
-                            <input [(ngModel)]="client.firstname" matInput  name="firstname" pattern="[A-Za-z]{0,20}" required>
+                            <input appVerifyKeypress [(ngModel)]="client.firstname" matInput  name="firstname" pattern="[A-Za-z]{0,20}" required>
                         </mat-form-field>
                     </td>
                 </tr>
@@ -38,7 +37,7 @@
                     <td>
                         <mat-form-field appearance="standard">
                             <mat-label>Téléphone</mat-label>
-                            <input type="tel" [(ngModel)]="client.tel" matInput name="tel" pattern="[0-9]{8}" required>
+                            <input appVerifyNumber size=8 type="tel" [(ngModel)]="client.tel" matInput name="tel" pattern="[0-9]{8}" required>
                         </mat-form-field>
                     </td>
                 </tr>
@@ -52,7 +51,7 @@
 
     <div>
         <mat-card>
-            <mat-card-title>Localité</mat-card-title>
+            <mat-card-title id="E" >Localité</mat-card-title>
             <table>
                 <tr>
                     <td>
@@ -66,19 +65,19 @@
                     <td>
                         <mat-form-field appearance="standard">
                             <mat-label>Ville</mat-label>
-                            <input [(ngModel)]="client.city" matInput name="city" pattern="[A-Za-z]{0,50}" required>
+                            <input appVerifyKeypress [(ngModel)]="client.city" matInput name="city" pattern="[A-Za-z]{0,50}" required>
                         </mat-form-field>
                     </td>
                     <td>
                         <mat-form-field appearance="standard">
                             <mat-label>Code postal</mat-label>
-                            <input matInput [(ngModel)]="client.cp"  maxlength="5" name="cp" pattern="[0-9]{5}"required>
+                            <input appVerifyNumber size=5 matInput [(ngModel)]="client.cp"  maxlength="5" name="cp" pattern="[0-9]{5}"required>
                         </mat-form-field>
                     </td>
                     <td>
                         <mat-form-field appearance="standard">
                             <mat-label>Pays</mat-label>
-                            <input [(ngModel)]="client.country" matInput name="country" pattern="[A-Za-z]{0,50}" required>
+                            <input appVerifyKeypress [(ngModel)]="client.country" matInput name="country" pattern="[A-Za-z]{0,50}" required>
                         </mat-form-field>
                     </td>
                 </tr>
@@ -87,7 +86,7 @@
     </div>
     <div>
         <mat-card>
-            <mat-card-title>Connexion</mat-card-title>
+            <mat-card-title appVerifyDirective>Connexion</mat-card-title>
             <p>
                 <mat-form-field appearance="standard">
                     <mat-label>Login</mat-label>
@@ -103,7 +102,7 @@
             <p>
                 <mat-form-field appearance="standard">
                     <mat-label>Confirmer mot de passe</mat-label>
-                    <input type="password" [(ngModel)]="client.passwordConfirm" matInput name="passwordConfirm" required    >
+                    <input type="password" [(ngModel)]="client.passwordConfirm" matInput name="passwordConfirm" onchange="verifyFormData()" required>
                 </mat-form-field>
             </p>
         </mat-card>
@@ -112,6 +111,6 @@
 </form>
 
 <div *ngIf="isValid" class="main-content">
-    <button mat-raised-button color="primary" (click)="isValid=false">Retour</button>
     <app-composant-recap [client]="client"></app-composant-recap>
+    <button mat-raised-button color="primary" (click)="isValid=false">Retour</button>
 </div>

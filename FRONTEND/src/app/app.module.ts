@@ -2,7 +2,6 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { Composant1Component } from './composant1/composant1.component';
 import { ComposantHeaderComponent } from './composant-header/composant-header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ComposantFormComponent } from './composant-form/composant-form.component';
@@ -15,15 +14,27 @@ import {MatCardModule} from '@angular/material/card';
 import { ComposantFooterComponent } from './composant-footer/composant-footer.component';
 import { ComposantRecapComponent } from './composant-recap/composant-recap.component'; 
 import { FormsModule } from '@angular/forms';
+import { VerifyNumberDirective } from '../directives/verify-number/verify-number.directive';
+import { VerifyKeypressDirective } from '../directives/verify-keyPress/verify-keypress.directive';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { PhoneFormatPipe } from './pipes/phone-format.pipe';
+import {MatDialogModule} from '@angular/material/dialog';
+import { ComposantCatalogComponent } from './composant-catalog/composant-catalog.component';
+import { ComposantSearchbarComponent } from './composant-searchbar/composant-searchbar.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
-    Composant1Component,
     ComposantHeaderComponent,
     ComposantFormComponent,
     ComposantFooterComponent,
     ComposantRecapComponent,
+    VerifyNumberDirective,
+    VerifyKeypressDirective,
+    PhoneFormatPipe,
+    ComposantCatalogComponent,
+    ComposantSearchbarComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,7 +45,10 @@ import { FormsModule } from '@angular/forms';
     MatButtonModule,
     MatSelectModule,
     MatCardModule,
-    FormsModule
+    FormsModule,
+    MatSnackBarModule,
+    MatDialogModule,
+    HttpClientModule
   ],
   providers: [],
   schemas: [
