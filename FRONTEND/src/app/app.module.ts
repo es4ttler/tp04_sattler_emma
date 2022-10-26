@@ -19,9 +19,9 @@ import { VerifyKeypressDirective } from '../directives/verify-keyPress/verify-ke
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { PhoneFormatPipe } from './pipes/phone-format.pipe';
 import {MatDialogModule} from '@angular/material/dialog';
+import { HttpClientModule } from '@angular/common/http';
 import { ComposantCatalogComponent } from './composant-catalog/composant-catalog.component';
 import { ComposantSearchbarComponent } from './composant-searchbar/composant-searchbar.component';
-import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [

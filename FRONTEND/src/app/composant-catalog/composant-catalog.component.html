@@ -1,6 +1,7 @@
 <mat-card>
     <mat-card-title>Catalogue</mat-card-title>
-    <app-composant-searchbar [property]="'name'" [list]="products" (filterResult)="updateList($event)" (filterReset)="getCatalogueObject()"></app-composant-searchbar>
+    <app-composant-searchbar ></app-composant-searchbar>
+    <!-- [property]="'name'" [list]="products" (filterResult)="updateList($event)" (filterReset)="getCatalogueObject()" -->
     <div *ngFor="let c of catalog">
         <mat-card>
             <mat-card-title>{{c.title}}</mat-card-title>

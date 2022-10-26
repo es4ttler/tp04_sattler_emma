@@ -23,6 +23,10 @@ export class ComposantCatalogComponent implements OnInit {
     this.catalogObservable = this.catalogService.getCatalog();
   }
 
+  updateList(event: Catalog[]) {
+    // this.catalog = event;
+  }
+
   
 
 }
