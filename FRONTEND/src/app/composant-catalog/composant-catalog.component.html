@@ -1,16 +1,20 @@
 <mat-card>
     <mat-card-title>Catalogue</mat-card-title>
-    <app-composant-searchbar ></app-composant-searchbar>
-    <!-- [property]="'name'" [list]="products" (filterResult)="updateList($event)" (filterReset)="getCatalogueObject()" -->
-    <div *ngFor="let c of catalog">
+    <app-composant-searchbar 
+        filterOn="title"
+        [catalog]="catalog" 
+        (filter)="updateCatalog($event)" 
+        (filterReset)="getCatalog()">
+    </app-composant-searchbar>
+    <div *ngFor="let items of catalog">
         <mat-card>
-            <mat-card-title>{{c.title}}</mat-card-title>
+            <mat-card-title>{{items.title}}</mat-card-title>
             <mat-card-content>
-                <p>Prix : {{c.price}} €</p>
+                <p>Prix : {{items.price}} €</p>
             </mat-card-content>
             <mat-divider></mat-divider>
             <mat-card-footer style="padding-left:1rem">
-                Quantité : {{c.quantity}}
+                Quantité : {{items.quantity}}
             </mat-card-footer>
         </mat-card>
     </div>

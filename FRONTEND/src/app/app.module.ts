@@ -13,7 +13,7 @@ import {MatSelectModule} from '@angular/material/select'
 import {MatCardModule} from '@angular/material/card'; 
 import { ComposantFooterComponent } from './composant-footer/composant-footer.component';
 import { ComposantRecapComponent } from './composant-recap/composant-recap.component'; 
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { VerifyNumberDirective } from '../directives/verify-number/verify-number.directive';
 import { VerifyKeypressDirective } from '../directives/verify-keyPress/verify-keypress.directive';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
@@ -48,7 +48,8 @@ import { ComposantSearchbarComponent } from './composant-searchbar/composant-sea
     FormsModule,
     MatSnackBarModule,
     MatDialogModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   schemas: [
