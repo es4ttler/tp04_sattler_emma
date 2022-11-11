@@ -33,6 +33,8 @@ import { ComposantDetailsComponent } from './catalog/composant-details/composant
 import { ComposantCatalogComponent } from './catalog/composant-catalog/composant-catalog.component';
 import { ComposantSearchbarComponent } from './catalog/composant-searchbar/composant-searchbar.component';
 import { ComposantRecapComponent } from './client/composant-recap/composant-recap.component';
+import {MatBadgeModule} from '@angular/material/badge';
+import {MatIcon, MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -61,6 +63,8 @@ import { ComposantRecapComponent } from './client/composant-recap/composant-reca
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
+    MatBadgeModule,
+    MatIconModule,
     MatSelectModule,
     MatCardModule,
     FormsModule,

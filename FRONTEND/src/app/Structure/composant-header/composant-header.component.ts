@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class ComposantHeaderComponent implements OnInit {
-  title='Application n°3'
+  title='Application n°4'
   name='Emma SATTLER'
   constructor() { }
 

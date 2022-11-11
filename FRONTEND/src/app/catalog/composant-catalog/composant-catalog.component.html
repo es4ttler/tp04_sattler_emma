@@ -10,7 +10,9 @@
         <mat-card class="flex-item">
             <mat-card-title>{{fruit.name}}</mat-card-title>
             <mat-card-content>
-                <button [routerLink]="['/catalog',fruit.id]" class="button" mat-raised-button   color="primary">i</button>
+                <button [routerLink]="['/catalog',fruit.id]" class="button" mat-raised-button   color="primary">
+                    <mat-icon class="material-symbols-outlined" fontIcon="info"></mat-icon>
+                </button>
                 <button class="button" mat-raised-button  (click)="addFruit(fruit)" color="primary">Ajouter</button>
             </mat-card-content>
             <mat-divider></mat-divider>
