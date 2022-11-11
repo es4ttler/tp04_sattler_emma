@@ -22,6 +22,8 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { HttpClientModule } from '@angular/common/http';
 import { ComposantCatalogComponent } from './composant-catalog/composant-catalog.component';
 import { ComposantSearchbarComponent } from './composant-searchbar/composant-searchbar.component';
+import {MatDividerModule} from '@angular/material/divider';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -49,7 +51,9 @@ import { ComposantSearchbarComponent } from './composant-searchbar/composant-sea
     MatSnackBarModule,
     MatDialogModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatDividerModule,
+    AppRoutingModule
   ],
   providers: [],
   schemas: [
