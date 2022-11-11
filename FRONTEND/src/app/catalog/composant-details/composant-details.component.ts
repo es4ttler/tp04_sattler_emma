@@ -18,7 +18,7 @@ export class ComposantDetailsComponent implements OnInit {
   ngOnInit(): void {
     this.catalogService.getCatalog().subscribe(
       data => {
-        this.fruit = data.find(p => p.name == this.route.snapshot.params['name']);
+        this.fruit = data.find(p => p.id == this.route.snapshot.params['id']);
       }
     );
   }
