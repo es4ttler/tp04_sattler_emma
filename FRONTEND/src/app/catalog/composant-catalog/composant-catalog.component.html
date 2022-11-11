@@ -1,7 +1,7 @@
 <mat-card>
     <mat-card-title>Catalogue</mat-card-title>
     <app-composant-searchbar 
-        filterOn="title"
+        filterOn="name"
         [catalog]="catalog" 
         (filter)="updateCatalog($event)" 
         (filterReset)="getCatalog()">

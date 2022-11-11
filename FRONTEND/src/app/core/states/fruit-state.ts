@@ -40,7 +40,11 @@ export class FruitState {
       fruits:
         state.fruits.filter((fruit) => fruit === payload).length === 1
           ? state.fruits.filter((fruit) => fruit !== payload)
-          : state.fruits.filter((fruit) => fruit !== state.fruits.find((fruitFind) => fruitFind === payload))
+          : state.fruits.filter(
+            (_, idx) =>
+              idx !==
+              state.fruits.findIndex((fruitFind) => fruitFind === payload)
+          ),
     });
   }
 }
