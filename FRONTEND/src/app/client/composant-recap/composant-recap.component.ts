@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Client } from '../core/Client';
-import { ServiceTestService } from '../service-test.service';
+import { ServiceTestService } from 'src/app/core/services/ClientService/service-test.service';
+import { Client } from '../../core/models/Client';
 
 @Component({
   selector: 'app-composant-recap',

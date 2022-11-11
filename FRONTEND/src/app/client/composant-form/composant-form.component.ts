@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { Client } from '../core/Client';
+import { Client } from '../../core/models/Client';
 
 @Component({
   selector: 'app-composant-form',

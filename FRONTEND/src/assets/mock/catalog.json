@@ -1,12 +1,12 @@
 [
-    {"title": "Pomme", "price": 9.50,"quantity":2},
-    {"title": "Poire", "price": 8.50,"quantity":4},
-    {"title": "Banane", "price": 7.50,"quantity":6},
-    {"title": "Orange", "price": 6.50,"quantity":8},
-    {"title": "Fraise", "price": 5.50,"quantity":10},
-    {"title": "Pêche", "price": 4.50,"quantity":12},
-    {"title": "Mangue", "price": 3.50,"quantity":14},
-    {"title": "Kiwi", "price": 2.50,"quantity":16},
-    {"title": "Ananas", "price": 1.50,"quantity":18},
-    {"title": "Cerise", "price": 0.50,"quantity":20}
+    {"id":"0","name": "Pomme", "price": 9.50,"color":"Vert"},
+    {"id":"1","name": "Poire", "price": 8.50,"color":"Vert"},
+    {"id":"2","name": "Banane", "price": 7.50,"color":"Jaune"},
+    {"id":"3","name": "Orange", "price": 6.50,"color":"Orange"},
+    {"id":"4","name": "Fraise", "price": 5.50,"color":"Rouge"},
+    {"id":"5","name": "Pêche", "price": 4.50,"color":"Orange"},
+    {"id":"6","name": "Mangue", "price": 3.50,"color":"Vert"},
+    {"id":"7","name": "Kiwi", "price": 2.50,"color":"Brun"},
+    {"id":"8","name": "Ananas", "price": 1.50,"color":"JAune"},
+    {"id":"9","name": "Cerise", "price": 0.50,"color":"Rouge"}
 ]
